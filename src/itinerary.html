@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wardrobe Creator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="itinerary.css">
+</head>
+<body>
+
+    <div class="title">
+        <div class="head">
+          <h1><i class="fa-solid fa-shirt"></i> Weather Wardrobe</h1>
+        </div>
+        <div class="desc">
+          <h1>Your travel companion for the perfect outfit</h1>
+        </div>
+        <div class="shirt">
+          <a href="index.html"><i class="fa-solid fa-shirt"></i></a>
+        </div>
+      </div>
+  
+      <div class="wardrobe-container">
+        <div class="input-container">
+            <input id="customItemName" placeholder="Enter Outfit" class="input-field" type="text">
+            <input id="customItemType" placeholder="Enter Peripherals" class="input-field" type="text">
+            <input id="customItemColor" placeholder="Enter Color" class="input-field" type="text">
+        </div>
+        <button onclick="addWardrobeItem()">Add Custom Item</button>
+        <button onclick="clearWardrobe()" class="btn">Clear Wardrobe</button>
+      </div>
+
+      <h2>Your Wardrobe Itinerary</h2>
+      <br>
+      <h3>Wardrobe Outfits | Wardrobe Peripherals | Wardrobe Color</h3>
+    <div class="itinerary-list" id="itinerary-list">
+        <!-- Items will be added here dynamically -->
+    </div>
+
+        <!-- Custom Modal for Editing Items -->
+    <!-- Custom Modal for Editing Items -->
+<div id="edit-modal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Edit Item</h2>
+        <label for="edit-description">Outfits:</label>
+        <input type="text" id="edit-description" />
+        <label for="edit-item">Peripherals:</label>
+        <input type="text" id="edit-item" />
+        <label for="edit-color">Color:</label>
+        <input type="text" id="edit-color" />
+        <button id="save-edit">Save</button>
+        <button id="cancel-edit">Cancel</button>
+    </div>
+</div>
+
+  
+  <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+  <script src="itinerary.js"></script>
+
+</body>
+</html>

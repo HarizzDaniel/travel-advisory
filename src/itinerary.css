@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+  
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #06293d;
+    overflow-y: auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.shirt a {
+    color: inherit; 
+    text-decoration: none; 
+  }
+  
+  .shirt a:hover {
+    color: rosybrown; 
+  }
+
+.title{
+    background-color: rgb(204, 223, 239);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+}
+  
+.head h1{
+    font-size: 40px;
+    font-family: 'Poppins';
+}
+  
+.head h1 i{
+    font-size: 30px;
+}
+  
+.desc h1{
+    font-size: 20px;
+    font-family: 'Roboto';
+}
+  
+.shirt{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 40px;
+}
+    
+.wardrobe-container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 85px;
+    width: 100vw;
+    background-color: rgb(237, 206, 148);
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+
+/* Input container */
+.input-container {
+    position: relative;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+  
+  /* Input field */
+.input-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    outline: none;
+    background-color: #c6d7f3;
+}
+  
+  /* Input label */
+.input-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: rgba(204, 204, 204, 0);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+  
+  /* Input highlight */
+.input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #06293d;
+    transition: all 0.3s ease;
+}
+  
+  /* Input field:focus styles */
+  .input-field:focus + .input-label {
+    top: -20px;
+    font-size: 12px;
+    color: #06293d;
+}
+  
+  .input-field:focus + .input-label + .input-highlight {
+    width: 100%;
+}
+  
+button {
+    background-color: #c6d7f3;
+    color: #06293d;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: 0.3s;
+    box-shadow: 0 0 0 5px #135981;
+    margin-right: 10px;
+}
+  
+  button:hover {
+    background-color: #06293d;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+#wardrobe{
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    
+}
+    
+.wardrobe-item { 
+    display: flex; 
+    justify-content: space-between; 
+    margin: 10px 0; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+    
+.btn { 
+    padding: 5px 10px; 
+    margin: 0 5px; 
+    cursor: pointer; 
+}
+
+h2{
+    color: aliceblue;
+    font-family: 'Poppins';
+}
+
+h3{
+    color: aliceblue;
+    font-family: 'Roboto' sans-serif;
+}
+
+.itinerary-list{
+    color: white;
+    font-family: 'Poppins' ;
+    width: 100%;
+}
+
+/* General styling for itinerary item container */
+.itinerary-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Styling for the description text */
+.itinerary-item span {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Shared styles for both buttons */
+.itinerary-item button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+/* Specific styles for Edit button */
+.itinerary-item button:nth-child(2) {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.itinerary-item button:nth-child(2):hover {
+    background-color: #45a049;
+}
+
+/* Specific styles for Delete button */
+.itinerary-item button:nth-child(3) {
+    background-color: #f44336;
+    color: white;
+}
+
+.itinerary-item button:nth-child(3):hover {
+    background-color: #d32f2f;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+  
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    margin: auto;
+}
+
+.modal-content h2{
+    color: #06293d;
+    font-family: 'Roboto';
+}
+  
+.modal.show {
+    display: flex;
+}
+  
+.modal input{
+    padding: 10px;
+    background-color: #c6d7f3;
+    border-radius: 5px;
+    color: #333;
+    font-family: 'Roboto';
+    margin: 10px 0;
+}
+
+.modal label{
+    font-family: 'Roboto';
+    justify-content: space-around;
+
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather Wardrobe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+
+    <div class="title">
+      <div class="head">
+        <h1><i class="fa-solid fa-shirt"></i> Weather Wardrobe</h1>
+      </div>
+      <div class="desc">
+        <h1>Your travel companion for the perfect outfit</h1>
+      </div>
+      <div class="shirt">
+        <a href="itinerary.html"><i class="fa-solid fa-shirt"></i></a>
+      </div>
+    </div>
+    
+    <div class="main-content">
+      <div class="container">
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Enter your location">
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>
+
+        <div class="not-found">
+            <img src="images/404.png">
+            <p>Oops! Invalid location :/</p>
+        </div>
+
+        <div class="weather-box">
+            <img src="">
+            <p class="temperature"></p>
+            <p class="description"></p>
+            <p class="country"></p>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+            <div class="time">
+                <i class="fa-solid fa-clock"></i>
+                <div class="text">
+                    <span class="local-time"></span>
+                    <p>Time</p>
+                </div>
+            </div>
+            <div class="feels-like">
+              <i class="fa-solid fa-temperature-half"></i>
+              <div class="text">
+                  <span></span>
+                  <p>Feels like</p>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="week-container">
+    <ul class="week-list">
+        <li>
+            <span class="day-name"></span>
+            <span class="day-temp"></span>
+            <span class="day-icon"></span>
+        </li>
+        <li>
+            <span class="day-name"></span>
+            <span class="day-temp"></span>
+            <span class="day-icon"></span>
+        </li>
+        <li>
+            <span class="day-name"></span>
+            <span class="day-temp"></span>
+            <span class="day-icon"></span>
+        </li>
+        <li>
+            <span class="day-name"></span>
+            <span class="day-temp"></span>
+            <span class="day-icon"></span>
+        </li>
+        <div class="clear"></div>
+    </ul>
+  </div>
+  
+  <div class="recom">
+    <div class="outfit-recommendations hidden">
+        <h2>Recommended Outfits</h2>
+        <div class="outfit-list"></div>
+        <button class="add-button">Add Selected Outfits to Itinerary</button>
+    </div>
+
+    <div class="peripheral-recommendations hidden">
+        <h2>Recommended Peripherals</h2>
+        <div class="peripheral-list"></div>
+        <button class="add-button">Add Selected Peripherals to Itinerary</button>
+    </div>
+</div>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
